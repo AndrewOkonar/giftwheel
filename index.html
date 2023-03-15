@@ -441,9 +441,7 @@
           margin: auto;
           bottom: -70px;
         }
-        audio {
-          z-index: 999;
-        }
+         #foobar { display: none }
       </style>
   </head>
   <body class="" id="home">
@@ -1305,6 +1303,8 @@
 
 
     <button onclick="gameStart()">Spin the Wheel!</button>
+    <audio src="audio_game_and_prize.mp3" id="my_audio" autoplay="false"></audio>
+    <!--- Audio from https://elements.envato.com/countdown-1-JSNLBH2 cut(From 3s to 11s) via https://mp3cut.net/ and combined with prize audio via happyscribe.com/audio-tools/mp3-joiner --->
 
   </div>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -1312,6 +1312,7 @@
   function gameStart() {
     var element = document.getElementById("home");
     element.classList.add("active");
+    document.getElementById("my_audio").play();
   }
   </script>
   </body>
